@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+
+    <a href="/posts/<%= post.id %>/edit">Edit</a> |
+    <form action="/posts/<%= post.id %>/delete" method="POST" style="display:inline;">
+        <button type="submit" onclick="return confirm('Delete this post?')">Delete</button>
+    </form>
+
+    <br><br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>
